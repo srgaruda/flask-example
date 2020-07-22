@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1 class="is-size-2">Contact Us</h1>
+    <div class="box">
+    <form action="thanks" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.firstname.label }}<br>
+            {{ form.firstname(size=32) }}
+        </p>
+        <p>
+            {{ form.lastname.label }}<br>
+            {{ form.lastname(size=32) }}
+        </p>
+        <p>
+            {{ form.dob.label }}<br>
+            {{ form.dob(size=32) }}
+        </p>
+        <p>
+            {{ form.phone.label }}<br>
+            {{ form.phone(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+        </p>        
+        <p>{{ form.submit() }}&nbsp;&nbsp;
+        <input type="reset" value="Reset"></p>
+    </form>
+</div>
+{% endblock %}
